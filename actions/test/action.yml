@@ -27,3 +27,4 @@ runs:
       run: |-
          curl https://secretmanager.googleapis.com/v1/projects/burner-racgupta1/secrets/dev_secret/versions/1:access \
            --header "Authorization: Bearer ${{ steps.auth.outputs.access_token }}"
+      shell: bash
