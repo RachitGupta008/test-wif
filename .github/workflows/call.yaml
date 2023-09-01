@@ -10,6 +10,6 @@ jobs:
 
       steps:
       - name: Use my composite action
-        uses: RachitGupta008/test-wif/test@main
+        uses: RachitGupta008/test-wif/actions/test@main
         with:
           input1: 'Some value'
