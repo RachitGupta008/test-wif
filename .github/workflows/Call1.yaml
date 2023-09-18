@@ -6,4 +6,3 @@ jobs:
     uses: RachitGupta008/packer-pipeline/.github/workflows/reusable.yaml@main
     with:
       environment: 'production'
-
