@@ -22,5 +22,5 @@ jobs:
 
        - id: 'access-secret'
          run: |-
-            curl -X GET "https://us-central1-aiplatform.googleapis.com/v1/projects/sandbox-dev-dbg/locations/us-central1/datasets/" \
+            curl -X GET -H "Content-Type: application/json" -H  "x-goog-user-project: sandbox-dev-dbg"     https://dialogflow.googleapis.com/v3/projects/sandbox-dev-dbg/locations/global/agents/4d29473e-6d72-4491-a083-4c62ef6e159b/environments/840a4981-8cd2-4e52-89ff-c48023f52327/experiments \
               --header "Authorization: Bearer ${{ steps.auth.outputs.access_token }}"
