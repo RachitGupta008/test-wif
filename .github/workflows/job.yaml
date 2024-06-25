@@ -16,7 +16,7 @@ jobs:
          uses: 'google-github-actions/auth@v1'
          with:
             token_format: 'access_token' # <--
-            workload_identity_provider: 'projects/472475384454/locations/global/workloadIdentityPools/my-pool'
+            workload_identity_provider: 'projects/472475384454/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
             service_account: 'gh-pipeline-sa@sandbox-dev-dbg.iam.gserviceaccount.com'
             access_token_lifetime: '300s' # optional, default: '3600s' (1 hour)
 
