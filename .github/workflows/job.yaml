@@ -16,11 +16,11 @@ jobs:
          uses: 'google-github-actions/auth@v1'
          with:
             token_format: 'access_token' # <--
-            workload_identity_provider: 'projects/487413294823/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
-            service_account: 'dev-service-account@burner-racgupta1.iam.gserviceaccount.com'
+            workload_identity_provider: 'projects/472475384454/locations/global/workloadIdentityPools/my-pool'
+            service_account: 'gh-pipeline-sa@sandbox-dev-dbg.iam.gserviceaccount.com'
             access_token_lifetime: '300s' # optional, default: '3600s' (1 hour)
 
        - id: 'access-secret'
          run: |-
-            curl https://secretmanager.googleapis.com/v1/projects/burner-racgupta1/secrets/dev_secret/versions/1:access \
+            curl -X GET "https://us-central1-aiplatform.googleapis.com/v1/projects/sandbox-dev-dbg/locations/us-central1/datasets/" \
               --header "Authorization: Bearer ${{ steps.auth.outputs.access_token }}"
